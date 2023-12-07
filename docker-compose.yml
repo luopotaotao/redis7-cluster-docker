@@ -1,0 +1,74 @@
+version: "3"
+services:
+  redis-cluster-6380:
+    image: redis:7.2.3
+    container_name: node-80
+    network_mode: 'host'
+    volumes:
+      - ./conf/redis-6380.conf:/usr/local/etc/redis/redis.conf
+      - ./log80:/var/log/redis
+      - ./data80:/data/redis
+    command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+  redis-cluster-6381:
+    image: redis:7.2.3
+    container_name: node-81
+    network_mode: 'host'
+    volumes:
+      - ./conf/redis-6381.conf:/usr/local/etc/redis/redis.conf
+      - ./log81:/var/log/redis
+      - ./data81:/data/redis
+    command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+  redis-cluster-6382:
+    image: redis:7.2.3
+    container_name: node-82
+    network_mode: 'host'
+    volumes:
+      - ./conf/redis-6382.conf:/usr/local/etc/redis/redis.conf
+      - ./log82:/var/log/redis
+      - ./data82:/data/redis
+    command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+  redis-cluster-6383:
+    image: redis:7.2.3
+    container_name: node-83
+    network_mode: 'host'
+    volumes:
+      - ./conf/redis-6383.conf:/usr/local/etc/redis/redis.conf
+      - ./log83:/var/log/redis
+      - ./data83:/data/redis
+    command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+  redis-cluster-6384:
+    image: redis:7.2.3
+    container_name: node-84
+    network_mode: 'host'
+    volumes:
+      - ./conf/redis-6384.conf:/usr/local/etc/redis/redis.conf
+      - ./log84:/var/log/redis
+      - ./data84:/data/redis
+    command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+  redis-cluster-6385:
+    image: redis:7.2.3
+    container_name: node-85
+    network_mode: 'host'
+    volumes:
+      - ./conf/redis-6385.conf:/usr/local/etc/redis/redis.conf
+      - ./log85:/var/log/redis
+      - ./data85:/data/redis
+    command: sh -c "redis-server /usr/local/etc/redis/redis.conf"
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
